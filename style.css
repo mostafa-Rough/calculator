@@ -22,17 +22,33 @@ h2
     font-weight: 500;
     font-variant: small-caps;
 }
+h2 span
+{
+    color:red;
+}
+.mode
+{
+    padding:5px;
+    font-size: 1.3em;
+}
+.mode sub
+{
+    font-variant: small-caps;
+    font-size: 0.6em;
+    font-weight: 600;
+    margin: 5px;
+}
 .container
 {
-    background-color: rgb(103, 103, 212);
+    background-color: #f0f0f0;
     width: 40%;
     height: 80%;
     border-radius: 4px;
     padding: 5px;
+    box-shadow: 2px 2px 4px rgb(164, 162, 162);
 }
 .container .set 
 {
-    background-color: red ;
     width: 90%;
     height: 10%;
     margin: auto;
@@ -43,7 +59,6 @@ h2
 }
 .container .content
 {
-    background-color: blue;
     width: 80%;
     height: 85%;
     margin: auto;
@@ -51,39 +66,51 @@ h2
 }
 .container .content .calc_head
 {
-    background-color: green;
+    background-color: #e3e2e2;
     height: 20%;
     width: 100%;
-    border-radius: 10px;
+    border-radius:5px;
     margin-bottom: 20px;
+    box-shadow: 2px 2px 2px rgb(164, 162, 162);
 }
 .container .content .calc_body
 {
     width: 100%;
     height: 70%;
-    background-color: yellow;
-    border-radius: 10px;
+    background-color: #bfbbbb;
+background-color: #e3e2e2;
+border-radius:5px;
 display: grid;
 grid-template-columns:repeat(4,1fr);
 grid-template-rows:repeat(5,1fr);
 gap:2%;
 padding:2%;
+box-shadow: 2px 2px 2px rgb(164, 162, 162);
 }
 .container .content .calc_body span
 {
     display:inline-block;
-    background-color: black;
-    color: white;
+    background-color: #959393;
+    color: #222020;
     width:100%;
     height:100%;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items:center ;
+    font-weight: 700;
+    box-shadow: 2px 2px 2px rgb(81, 80, 80);
 }
+.container .content .calc_body .item_before_last,
+.container .content .calc_body .item_del
+{
+background-color: rgb(70, 69, 94);
+color: white;
+font-weight: 300;
+}
+
 .container .content .calc_body .item_before_last
 {
-    background-color: red;
     grid-column: 1/3;
 }
 .container .content .calc_body .item_last
