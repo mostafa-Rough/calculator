@@ -6,38 +6,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>calculator</title>
-</head>
-<body>
     <div class="container">
 <div class="set">
-    <h2>Calculator<span> v1+</span></h2>
+    <h2>Calculator<p> v1+</p></h2>
 <div class="mode"><sub>theme</sub><i class="fa-solid fa-circle-half-stroke"></i></div>
 </div>
         <div class="content">
-            <div class="calc_head"></div>
+            <div class="calc_head">
+                <div class="op_screen" id="operation"></div>
+                <div class="result_screen" id="screen"></div>
+            </div>
             <div class="calc_body">
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span class="item_del">DEL</span>
-                <span>4</span>
-                <span>5</span>
-                <span>6</span>
-                <span>+</span>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>-</span>
-                <span>.</span>
-                <span>0</span>
-                <span>/</span>
-                <span>x</span>
-                <span class="item_before_last">RESET</span>
-                <span class="item_last">=</span>
+                <span class="btn">7</span>
+                <span class="btn">8</span>
+                <span class="btn">9</span>
+                <span class="item_del num" id="del">DEL</span>
+                <span class="btn">4</span>
+                <span class="btn">5</span>
+                <span class="btn">6</span>
+                <span class="arith">+</span>
+                <span class="btn">1</span>
+                <span class="btn">2</span>
+                <span class="btn">3</span>
+                <span class="arith">-</span>
+                <span class="arith">.</span>
+                <span class="btn">0</span>
+                <span class="arith">/</span>
+                <span class="arith">x</span>
+                <span class="item_before_last num" id="reset">RESET</span>
+                <span class="item_last num" id="equal">=</span>
             </div>
         </div>
         
     </div>
-    <script scr="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
