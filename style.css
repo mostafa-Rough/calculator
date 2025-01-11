@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+font-family: "Poppins", serif;
+font-style: normal;
+}
+body
+{
+    background-color: rgb(188, 207, 207);
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+h2
+{
+    font-size: 1.2em;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+.container
+{
+    background-color: rgb(103, 103, 212);
+    width: 40%;
+    height: 80%;
+    border-radius: 4px;
+    padding: 5px;
+}
+.container .set 
+{
+    background-color: red ;
+    width: 90%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.container .content
+{
+    background-color: blue;
+    width: 80%;
+    height: 85%;
+    margin: auto;
+    padding-top: 8px;
+}
+.container .content .calc_head
+{
+    background-color: green;
+    height: 20%;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.container .content .calc_body
+{
+    width: 100%;
+    height: 70%;
+    background-color: yellow;
+    border-radius: 10px;
+display: grid;
+grid-template-columns:repeat(4,1fr);
+grid-template-rows:repeat(5,1fr);
+gap:2%;
+padding:2%;
+}
+.container .content .calc_body span
+{
+    display:inline-block;
+    background-color: black;
+    color: white;
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+.container .content .calc_body .item_before_last
+{
+    background-color: red;
+    grid-column: 1/3;
+}
+.container .content .calc_body .item_last
+{
+    background-color: red;
+    grid-column: 3/-1;
+}
+
