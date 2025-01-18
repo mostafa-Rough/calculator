@@ -35,10 +35,7 @@ op_screen.textContent=" ";
                                       
                                      op_screen.textContent+=this.textContent;
                                 }
-                  }
-
-                
-              
+                  }   
         })
          
  }
@@ -48,13 +45,15 @@ op_screen.textContent=" ";
 })
  del.addEventListener('click',function()
 {
-                  if(op_screen.textContent!==" ")
+        if(result.textContent!==" " && result.textContent!=="Unvalid operation")
                         {
                                 op_screen.textContent=op_screen.textContent.slice(0,-1);
                                 char=op_screen.textContent[op_screen.textContent.length-1];
                                           if(!array.includes(char))
                                           {
                                                 result.textContent=eval(op_screen.textContent);
+                                                
+
                                           }
                         }
                         else
@@ -62,11 +61,10 @@ op_screen.textContent=" ";
                                 op_screen.textContent=result.textContent=" ";
 
                         }
-
 })
  del.addEventListener('dblclick',function()
 {
-        if(result.textContent!==" ")
+        if(result.textContent!==" " && result.textContent!=="Unvalid operation")
         {
                 op_screen.textContent=op_screen.textContent.slice(0,-2);
                 char=op_screen.textContent[op_screen.textContent.length-1];
@@ -83,12 +81,19 @@ op_screen.textContent=" ";
 })
 equal.addEventListener('click',function()
 {
-        if(result.textContent!==' ')
+        try {
+                if(result.textContent!==' ')
+                        {
+                             op_screen.textContent =result.textContent;
+                        }
+                        throw new Error('Unvalid operation')
+        } catch (error) {
+                op_screen.textContent=error.message;
+                op_screen.style.color='red';
+                op_screen.style.fontSize='0.8em';
+        }finally
         {
-             op_screen.textContent =result.textContent;
-             result.textContent=' ';
+                result.textContent=' ';
         }
-       
-
 
 })
