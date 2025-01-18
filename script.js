@@ -45,7 +45,7 @@ op_screen.textContent=" ";
 })
  del.addEventListener('click',function()
 {
-        if(result.textContent!==" " && result.textContent!=="Unvalid operation")
+        if(result.textContent!==" " && result.textContent!=="invalid operation")
                         {
                                 op_screen.textContent=op_screen.textContent.slice(0,-1);
                                 char=op_screen.textContent[op_screen.textContent.length-1];
@@ -64,7 +64,7 @@ op_screen.textContent=" ";
 })
  del.addEventListener('dblclick',function()
 {
-        if(result.textContent!==" " && result.textContent!=="Unvalid operation")
+        if(result.textContent!==" " && result.textContent!=="invalid operation")
         {
                 op_screen.textContent=op_screen.textContent.slice(0,-2);
                 char=op_screen.textContent[op_screen.textContent.length-1];
@@ -86,11 +86,10 @@ equal.addEventListener('click',function()
                         {
                              op_screen.textContent =result.textContent;
                         }
-                        throw new Error('Unvalid operation')
+                        throw new Error('invalid operation')
         } catch (error) {
                 op_screen.textContent=error.message;
-                op_screen.style.color='red';
-                op_screen.style.fontSize='0.8em';
+                op_screen.style.cssText = 'color: red; font-size: 0.7em;';
         }finally
         {
                 result.textContent=' ';
