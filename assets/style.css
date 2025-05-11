@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+margin: 0;
+padding:0;
+box-sizing: border-box;
+font-family: "Poppins", serif;
+font-style: normal;
+}
+body
+{
+    background-color: rgb(188, 207, 207);
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+h2
+{
+    font-size: 1.2em;
+    font-weight: 500;
+    font-variant: small-caps;
+}
+h2 p
+{
+    color:red;
+    display: inline;
+}
+.mode
+{
+    padding:5px;
+    font-size: 1.3em;
+}
+.mode sub
+{
+    font-variant: small-caps;
+    font-size: 0.6em;
+    font-weight: 600;
+    margin: 5px;
+    color: red;
+}
+.container
+{
+    /* background-color: #f0f0f0; */
+    background-color: #181717;
+    width: 40%;
+    height: 80%;
+    border-radius: 4px;
+    padding: 5px;
+    /* box-shadow: 2px 2px 4px rgb(164, 162, 162); */
+    box-shadow: 2px 2px 4px rgb(54, 54, 54);
+    color: white;
+}
+.container .set 
+{
+    width: 90%;
+    height: 10%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.container .content
+{
+    width: 80%;
+    height: 85%;
+    margin: auto;
+    padding-top: 8px;
+}
+.container .content .calc_head
+{
+    /* background-color: #e3e2e2; */
+    background-color: #050505;
+    height: 20%;
+    width: 100%;
+    border-radius:5px;
+    margin-bottom: 20px;
+    /* box-shadow: 2px 2px 2px rgb(164, 162, 162); */
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+.container .content .calc_head .op_screen
+{
+    width: fit-content;
+    max-width: 100%;
+    height: 70%;
+    margin-left: auto;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:flex-end;
+    clear: both;
+    font-weight: 600;
+    overflow: hidden;
+}
+.container .content .calc_head .result_screen
+{
+    width: fit-content;
+    overflow: hidden;
+    height: 30%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: #3e3c3c;
+    flex-direction: column-reverse;
+    align-items:flex-end;
+}
+.container .content .calc_body
+{
+    width: 100%;
+    height: 70%;
+    /* background-color: #bfbbbb; */
+background-color: #080808;
+border-radius:5px;
+display: grid;
+grid-template-columns:repeat(4,1fr);
+grid-template-rows:repeat(5,1fr);
+gap:2%;
+padding:2%;
+box-shadow: 2px 2px 2px rgb(0, 0, 0);
+/* box-shadow: 2px 2px 2px rgb(164, 162, 162); */
+}
+.container .content .calc_body span
+{
+    display:inline-block;
+    background-color: #959393;
+    color: #222020;
+    width:100%;
+    height:100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    font-weight: 700;
+    box-shadow: 2px 2px 2px rgb(81, 80, 80);
+    opacity: 0.8;
+    transition: all  0.3s ease;
+    cursor: pointer;
+}
+.container .content .calc_body span:hover
+{
+opacity:1;
+}
+.container .content .calc_body .item_before_last,
+.container .content .calc_body .item_del
+{
+background-color: rgb(70, 69, 94);
+color: white;
+font-weight: 300;
+}
+
+.container .content .calc_body .item_before_last
+{
+    grid-column: 1/3;
+}
+.container .content .calc_body .item_last
+{
+    background-color: red;
+    grid-column: 3/-1;
+}
+
